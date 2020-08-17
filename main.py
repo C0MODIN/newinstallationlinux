@@ -50,17 +50,27 @@ os.system('rm config/*.deb')
 #os.system('pip3 install pygame')
 
 #Git installation
-os.system('sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"')
-os.system('git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k')
+os.system('sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"') #OH_MY_ZSH
+os.system('git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k')
+
+
+#Fonts
+os.system('wget -P /usr/share/fonts/ https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf')
+os.system('wget -P /usr/share/fonts/ https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf')
+os.system('wget -P /usr/share/fonts/ https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf')
+os.system('wget -P /usr/share/fonts/ https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf')
+
 
 #Configuration of system grub(only nvidia) like zsh tmux etc...
 
 config_zsh = 'config/.zshrc'
 config_bash = 'config/.bashrc'
+config_p10k = 'config/.p10k.zsh'
 testfile = 'packages.txt'
 
 os.system('cp config/.zshrc ~/.zshrc')
 os.system('cp config/.bashrc ~/.bashrc')
+os.system('cp config/.p10k.zsh ~/.p10k.zsh')
 
 #Final
 os.system('sudo apt autoremove')

@@ -2,6 +2,16 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+function start_tmux() {
+    if type tmux &> /dev/null; then
+        #if not inside a tmux session, and if no session is started, start a new session
+        if [[ $HOST == "laptop" && -z "$TMUX" && -z $TERMINAL_CONTEXT ]]; then
+            (tmux -2 attach || tmux -2 new-session)
+        fi
+    fi
+}
+start_tmux
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
