@@ -68,6 +68,9 @@ config_bash = 'config/.bashrc'
 config_p10k = 'config/.p10k.zsh'
 testfile = 'packages.txt'
 
+os.system('mkdir ~/.myosconfig')
+os.system('cp config/kdeneonblack.svg config/kdeneonwhite.svg ~/.myosconfig')
+
 os.system('cp config/.zshrc ~/.zshrc')
 os.system('cp config/.bashrc ~/.bashrc')
 os.system('cp config/.p10k.zsh ~/.p10k.zsh')
