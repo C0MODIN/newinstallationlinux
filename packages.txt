@@ -1,1 +1,1 @@
-neovim git cmake python3-pip meson tmux zsh cpu-x scrcpy libreoffice libreoffice-plasma software-properties-common apt-transport-https wget krdc haguichi lutris
+neovim git cmake python3-pip meson zsh cpu-x scrcpy libreoffice libreoffice-plasma software-properties-common apt-transport-https wget krdc haguichi lutris
