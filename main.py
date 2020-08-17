@@ -12,7 +12,11 @@ os.system('sudo add-apt-repository ppa:graphics-drivers/ppa') #NVIDIA Repo
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
 
-os.system('sudo add-apt-repository -y ppa:webupd8team/haguichi')
+os.system('sudo add-apt-repository -y ppa:webupd8team/haguichi') #GUI for hamachi
+keyboard.press(Key.enter)
+keyboard.release(Key.enter)
+
+os.system('sudo add-apt-repository ppa:lutris-team/lutris') #Plataform for games
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
 
