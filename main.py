@@ -50,7 +50,7 @@ os.system('rm config/*.deb')
 #os.system('pip3 install pygame')
 
 #Git installation
-os.system('sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"') #OH_MY_ZSH
+os.system('sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"') #OH_MY_ZSH
 os.system('git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k')
 
 
